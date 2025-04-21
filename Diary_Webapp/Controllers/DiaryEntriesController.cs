@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace Diary_Webapp.Controllers
+namespace Diary_Webapp.Controllers //this is a namespace for the controller
 {
     public class DiaryEntriesController:Controller
 
