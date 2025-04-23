@@ -11,6 +11,8 @@ namespace Diary_Webapp.Data
 
         }
 
+        public DbSet<DiaryEntry> DiaryEntry { get; set; }
+        
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
