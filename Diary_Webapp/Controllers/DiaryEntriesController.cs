@@ -25,5 +25,9 @@ namespace Diary_Webapp.Controllers //this is a namespace for the controller
             return View(objDiaryEntryList);
         }
 
+        public IActionResult Create()
+        {
+            return View();
+        }
     }
 }
