@@ -29,5 +29,15 @@ namespace Diary_Webapp.Controllers //this is a namespace for the controller
         {
             return View();
         }
+
+        [HttpPost]
+        public IActionResult Create(DiaryEntry obj)
+        {
+
+            _db.DiaryEntry.Add(obj);
+            _db.SaveChanges();
+            return RedirectToAction("Index", "Home");
+        }
+        
     }
 }
