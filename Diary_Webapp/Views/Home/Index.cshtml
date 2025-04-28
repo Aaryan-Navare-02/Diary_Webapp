@@ -1,8 +1,99 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Diary</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+    <!-- Bootstrap CSS + Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: #343a40;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #6c757d;
+        }
+
+        .hero .btn {
+            margin-top: 2rem;
+            padding: 0.75rem 2rem;
+            font-size: 1.1rem;
+        }
+
+        .features {
+            margin-top: 4rem;
+        }
+
+        .features h4 {
+            font-weight: bold;
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 1rem;
+            text-align: center;
+            background-color: #f8f9fa;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <h1><i class="bi bi-journal-bookmark-fill text-primary"></i> Welcome to My Diary</h1>
+        <p>Capture your moments, thoughts, and dreams every day.</p>
+        <form asp-controller="DiaryEntries" asp-action="Create" method="get">
+            <button type="submit" class="btn btn-primary">Get Started</button>
+        </form>
+
+    </div>
+
+    <div class="container features text-center">
+        <div class="row">
+            <div class="col-md-4">
+                <i class="bi bi-pencil-square fs-1 text-primary"></i>
+                <h4>Simple Writing</h4>
+                <p>Write entries with ease and clarity.</p>
+            </div>
+            <div class="col-md-4">
+                <i class="bi bi-calendar-heart fs-1 text-success"></i>
+                <h4>Organized Days</h4>
+                <p>Track your past through sorted logs.</p>
+            </div>
+            <div class="col-md-4">
+                <i class="bi bi-shield-lock fs-1 text-warning"></i>
+                <h4>Private & Secure</h4>
+                <p>Your personal stories stay personal.</p>
+            </div>
+        </div>
+    </div>
+
+    <br />
+    <br />
+
+    <footer>
+        &copy; 2025 My Diary. All rights reserved.
+    </footer>
+
+</body>
+</html>
